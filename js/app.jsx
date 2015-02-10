@@ -24,7 +24,6 @@ var App = React.createClass({
         var rows = [];
         for(var i=0; i < this.state.recenttracks.track.length; i++) {
             var music = this.state.recenttracks.track[i];
-            debugger
             rows.push(<li>{music.name} - {music.artist["#text"]}</li>);
         };
         return <ul className="music_list">
