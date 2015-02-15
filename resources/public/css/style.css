@@ -1,0 +1,33 @@
+/* some style */
+body {
+    font-family: 'AvenirNextLTW01-Regular', Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.music_list {
+    width: 40%;
+    box-shadow: 15px 15px 7px #888888;
+    transform: rotate(-7deg);
+    margin-left:30%;
+    margin-top:7%;
+    background-image: url(http://www.picgifs.com/music-graphics/music-graphics/music-notes/music-graphics-music-notes-734064.gif);
+    background-repeat: no-repeat;
+    background-position: -6% 0%;
+    padding-bottom: 15px;
+}
+
+.music_list li {
+    color: #666;
+    list-style-type: none;
+}
+
+.music_list li:nth-child(1) {
+    color: #111;
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}
+
+.music_list li:nth-child(2) {
+    margin-top: 1%;
+}
+
