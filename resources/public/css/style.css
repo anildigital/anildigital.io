@@ -1,4 +1,3 @@
-/* some style */
 body {
     font-family: 'AvenirNextLTW01-Regular', Helvetica, sans-serif;
     font-size: 20px;
@@ -30,4 +29,3 @@ body {
 .music_list li:nth-child(2) {
     margin-top: 1%;
 }
-
