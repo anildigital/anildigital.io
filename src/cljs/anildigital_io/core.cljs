@@ -53,9 +53,9 @@
        om/IRender
        (render [_]
          (dom/div nil
-                  (dom/div #js {:className "label"} "Current Location:"
+                  (dom/div #js {:className "label"} "Recent Location:"
                            (apply dom/div nil
-                                  (str "Somewhere " (:address (:location data)) ", " (:city (:location data)) ", " (:country (:location data)))))))))
+                                  (str "Somewhere near " (:address (:location data)) ", " (:city (:location data)) ", " (:country (:location data)))))))))
    location-app-state
    {:target (. js/document (getElementById "app2"))})
 
