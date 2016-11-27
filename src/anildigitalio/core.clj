@@ -13,23 +13,26 @@
                       ["The 7 Habits of Highly Effective People" 1989 "Stephen Covey"]]))
 
 (defn render
-  [req]
-  {:status  200
-   :headers {"Content-Type" "text/html"}
-   :body    (hiccup/html
-             "<!doctype html>"
-             [:html
-              [:head
-               [:link {:rel "stylesheet" :media "screen"
-                       :href  "/public/css/anildigital.css"}]]
-              [:body
-               [:div#application
-                (r/render-html (c/app {:route route
-                                       :books @books}))
-                ]
-               [:script {:src "/public/js/anildigitalio.js"}]
-               [:script
-                "anildigitalio.client.init()"]]])})
+  [{{route :route} :route-params}]
+  (let [state {:route route
+               :books @books}]
+    {:status  200
+     :headers {"Content-Type" "text/html"}
+     :body    (hiccup/html
+               "<!doctype html>"
+               [:html
+                [:head
+                 [:link {:rel "stylesheet" :media "screen"
+                         :href  "/public/css/anildigital.css"}]]
+                [:body
+                 [:div#application
+                  (r/render-html (c/app state))
+                  ]
+                 [:script#initial-data {:type "application/edn"}
+                  (pr-str state)]
+                 [:script {:src "/public/js/anildigitalio.js"}]
+                 [:script
+                  "anildigitalio.client.init()"]]])}))
 
 (defroutes all-routes
   (GET "/" [] render)
