@@ -1,4 +1,4 @@
-(defproject anildigital_io "0.1.0-SNAPSHOT"
+(defproject anildigitalio "0.1.0-SNAPSHOT"
   :description "Homepage"
   :dependencies [[org.clojure/tools.namespace "0.3.0-alpha2"
                   :exclusions [org.clojure/tools.reader]]
@@ -17,8 +17,8 @@
   :figwheel {:css-dirs ["resources/public/css"]}
   :cljsbuild {:builds [{:id "exchange"
                         :source-paths ["src/"]
-                        :compiler {:main "anildigital-io.client"
+                        :compiler {:main "anildigitalio.client"
                                    :optimizations :none
                                    :asset-path "/public/js/out"
-                                   :output-to "resources/public/js/anildigital-io.js"
+                                   :output-to "resources/public/js/anildigitalio.js"
                                    :output-dir "resources/public/js/out"}}]})

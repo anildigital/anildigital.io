@@ -1,4 +1,4 @@
-(ns anildigital-io.core
+(ns anildigitalio.core
   (:require [hiccup.core :as hiccup])
   (:use [compojure.route :only [files not-found]]
         [compojure.handler :only [site]]
@@ -16,13 +16,13 @@
               [:html
                [:head
                 [:link {:rel "stylesheet" :media "screen"
-                        :href  "/public/css/anildigital-io.css"}]]
+                        :href  "/public/css/anildigital.css"}]]
                [:body
                 [:div#application
                  "PLACE FOR GENERATED HTML"]
-                [:script {:src "/public/js/anildigital-io.js"}]
+                [:script {:src "/public/js/anildigitalio.js"}]
                 [:script
-                 "anildigital-io.client.init()"]]])})
+                 "anildigitalio.client.init()"]]])})
 
 (defroutes all-routes
   (GET "/" [] render)

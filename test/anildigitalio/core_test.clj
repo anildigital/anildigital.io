@@ -1,6 +1,6 @@
-(ns anildigital-io.core-test
+(ns anildigitalio.core-test
   (:require [clojure.test :refer :all]
-            [anildigital-io.core :refer :all]))
+            [anildigitalio.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

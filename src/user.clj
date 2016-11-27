@@ -1,6 +1,6 @@
 (ns user
   (:use org.httpkit.server)
-  (:require [anildigital-io.core :as anildigital-io]
+  (:require [anildigitalio.core :as anildigitalio]
             [clojure.tools.namespace.repl :refer [refresh]]))
 
 (defonce server (atom nil))
@@ -11,7 +11,7 @@
    :body    "hello HTTP!"})
 
 (defn go []
-  (reset! server (run-server #'anildigital-io/app {:port 8080})))
+  (reset! server (run-server #'anildigitalio/app {:port 8080})))
 
 (defn reset
   []

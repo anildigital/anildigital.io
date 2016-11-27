@@ -1,4 +1,4 @@
-(ns anildigital-io.client)
+(ns anildigitalio.client)
 
 (defn init
   []
