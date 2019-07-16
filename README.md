@@ -1,4 +1,4 @@
-# AnildigitalIo
+# anildigital.io
 
 To start your Phoenix server:
 
