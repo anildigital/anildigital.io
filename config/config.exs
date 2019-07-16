@@ -12,7 +12,10 @@ config :anildigital_io, AnildigitalIoWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "09oGTEPXIx3ZV8gyUqAXGdmhhCJFAlL0uQq1th/8zn3nkKmwZNIAZK7RfPSYOmDz",
   render_errors: [view: AnildigitalIoWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: AnildigitalIo.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: AnildigitalIo.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "KAXXkR57PSs4Wgpj5osmbkqkbgWTRqZU8obmNPmbzJDwCToA+OSnylPZdAfL6evf"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
