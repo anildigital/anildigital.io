@@ -9,7 +9,8 @@ defmodule AnildigitalIo.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      AnildigitalIoWeb.Endpoint
+      AnildigitalIoWeb.Endpoint,
+      {DynamicSupervisor, strategy: :one_for_one, name: AnildigitalIo.DynamicSupervisor}
       # Starts a worker by calling: AnildigitalIo.Worker.start_link(arg)
       # {AnildigitalIo.Worker, arg},
     ]

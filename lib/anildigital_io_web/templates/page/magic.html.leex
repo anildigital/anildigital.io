@@ -1,0 +1,9 @@
+<div>
+  <div style="position:relative">
+    <button phx-click="do_magic">Do magic</button>
+    <%= for {k, v} <- @magic do %>
+        <div class="circle magic" style="position:absolute;top:<%= v[:top] %>px;left:<%= v[:left] %>px;">
+        </div>
+     <% end %>
+  </div>
+</div>

@@ -5,6 +5,6 @@ defmodule AnildigitalIoWeb.PageController do
 
   def index(conn, _params) do
     # render(conn, "index.html")
-    LiveView.Controller.live_render(conn, AnildigitalIoWeb.RecentSongView, session: %{})
+    LiveView.Controller.live_render(conn, AnildigitalIoWeb.MagicView, session: %{})
   end
 end
